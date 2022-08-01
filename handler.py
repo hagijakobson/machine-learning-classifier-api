@@ -25,8 +25,8 @@ def predict():
     pipeline = DataPrep()
 
     # data data preparation
-    df_processed = pipeline.data_preparation(df_raw)
-
+    df_processed = pipeline.data_preparation(df_raw.copy())
+    
     # prediction
     pred = model.predict(df_processed)
     
